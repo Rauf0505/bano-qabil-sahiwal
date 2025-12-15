@@ -1,130 +1,347 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/public/logos/BanoQabil-Logo.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bano-qabil-sahiwal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bano Qabil Sahiwal - Free IT Training</title>
+
+  <!-- Tailwind CSS (For Vite: link to your compiled output.css) -->
   <link href="/src/style.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
     rel="stylesheet">
 </head>
-<body>
-  <header class="w-full bg-white border-b border-gray-400 sticky top-0 z-1000">
-    <nav class="navbar">
-      <div class="nav-container max-w-[1600px] mx-auto flex items-center px-5 h-25 relative">
 
-        <a href="/index.html" class="logo block mr-8">
-          <img src="/public/logos/BanoQabil-Logo.svg" alt="bano qabil official logo" class="w-20 h-20 object-contain">
-        </a>
-        <div class="hamburger ml-auto flex-col cursor-pointer hidden" id="hamburger">
-          <span class="block w-6 h-[3px] bg-gray-800 my-[3px] transition-all"></span>
-          <span class="block w-6 h-[3px] bg-gray-800 my-[3px] transition-all"></span>
-          <span class="block w-6 h-[3px] bg-gray-800 my-[3px] transition-all"></span>
+<body class="bg-gray-50">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="flex items-center justify-between h-16 md:h-20">
+
+        <div class="flex items-center justify-between">
+
+          <!-- Logo -->
+          <a href="/public/logos/BanoQabil-Logo.svg" class="">
+            <svg class="w-12 h-12 md:w-14 md:h-14" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="45" fill="#2ecc71" />
+              <path d="M30 60 L40 70 L70 40" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" />
+            </svg>
+          </a>
+
         </div>
 
-        <ul class="nav-menu hidden lg:flex flex-1 items-center list-none">
 
-          <li class="nav-item relative">
-            <a href="/index.html"
-              class="nav-link block px-5 py-6 text-gray-800 text-sm font-medium hover:text-[#016832] transition">
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex items-center space-x-1 flex-1 ml-8">
+          <li class="relative group">
+            <a href="#"
+              class="nav-link-underline block px-4 py-6 text-gray-800 text-sm font-medium hover:text-green-700 transition-colors">
               Home
             </a>
           </li>
 
-          <li class="nav-item relative group">
-            <a href="/public/pages/about.html"
-              class="nav-link px-5 py-6 flex items-center text-gray-800 text-sm font-medium hover:text-[#016832] transition">
+          <li class="relative group nav-item">
+            <a href="#"
+              class="nav-link-underline flex items-center px-4 py-6 text-gray-800 text-sm font-medium hover:text-green-700 transition-colors">
               About Us
-            </a>
-          </li>
-
-          <li class="nav-item relative group">
-            <a href="/public/pages/courses.html"
-              class="nav-link px-5 py-6 text-sm flex items-center text-gray-800 font-medium hover:text-[#016832]">
-              All Courses <span class="arrow text-[10px] ml-1"><img src="/public/icons/arrow-down.svg" alt=""></span>
+              <span class="arrow-rotate ml-1 text-xs">▼</span>
             </a>
             <div
-              class="dropdown absolute left-0 top-full w-64 bg-white shadow-xl py-3 rounded-2xl border border-gray-400 hidden group-hover:block animate-fade">
-              <a href="/public/pages/courses/full-stack-development.html"
-                class="dropdown-item block px-6 py-3 text-sm hover:bg-gray-100 hover:text-green-600">Full Stack
-                Development<span
-                  class="new-badge bg-[#008C76] text-white text-[10px] px-2 py-0.5 rounded ml-2 font-bold">NEW</span></a>
-              <a href="/public/pages/courses/graphic-design.html"
-                class="dropdown-item block px-6 py-3 text-sm hover:bg-gray-100 hover:text-green-600">Graphic Design</a>
-              <a href="/public/pages/courses/ecommerce.html"
-                class="dropdown-item block px-6 py-3 text-sm hover:bg-gray-100 hover:text-green-600">E-Commerce
-                Development</a>
-              <a href="/public/pages/courses/digital-marketing.html"
-                class="dropdown-item block px-6 py-3 text-sm hover:bg-gray-100 hover:text-green-600">Digital
-                Marketing</a>
-              <a href="/public/pages/courses/cyber-security.html"
-                class="dropdown-item block px-6 py-3 text-sm hover:bg-gray-100 hover:text-green-600">
-                Cyber Security <span
-                  class="new-badge bg-[#008C76] text-white text-[10px] px-2 py-0.5 rounded ml-2 font-bold">NEW</span>
+              class="dropdown-enter absolute left-0 top-full hidden group-hover:block w-64 bg-white shadow-xl rounded-lg py-3 border border-gray-200">
+              <a href="/Html File/header file/vision.html"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Vision and Mission
               </a>
-              <a href="/public/pages/courses/video-editing.html"
-                class="dropdown-item block px-6 py-3 text-sm hover:bg-gray-100 hover:text-green-600">Video Editing</a>
-              <a href="/public/pages/courses/essential-of-ai.html"
-                class="dropdown-item block px-6 py-3 text-sm hover:bg-gray-100 hover:text-green-600">Essentials of
-                AI<span
-                  class="new-badge bg-[#008C76] text-white text-[10px] px-2 py-0.5 rounded ml-2 font-bold">NEW</span></a>
-              <a href="/public/pages/courses/seo.html"
-                class="dropdown-item block px-6 py-3 text-sm hover:bg-gray-100 hover:text-green-600">SEO<span
-                  class="new-badge bg-[#008C76] text-white text-[10px] px-2 py-0.5 rounded ml-2 font-bold">NEW</span></a>
+              <a href="/Html File/header file/patron.html"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Patron in Chief / All Staff
+              </a>
+              <a href="https://banoqabil.org/Student/Register"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Registrar
+              </a>
+              <a href="/Html File/header file/map.html"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Map
+              </a>
             </div>
           </li>
 
-          <li class="nav-item relative group">
-            <a href="/public/pages/admissions.html"
-              class="nav-link px-5 py-6 flex items-center text-sm text-gray-800 hover:text-[#016832]">
-              Admissions <span class="arrow text-[10px] ml-1"><img src="/public/icons/arrow-down.svg" alt=""></span>
+          <li class="relative group nav-item">
+            <a href="#"
+              class="nav-link-underline flex items-center px-4 py-6 text-gray-800 text-sm font-medium hover:text-green-700 transition-colors">
+              All Courses
+              <span class="arrow-rotate ml-1 text-xs">▼</span>
             </a>
             <div
-              class="dropdown absolute left-0 top-full w-64 bg-white shadow-xl py-3 rounded-2xl border border-gray-400 hidden group-hover:block animate-fade">
-              <a href="https://banoqabil.org/Student/Register"
-                class="dropdown-item block px-6 py-3 text-sm hover:bg-gray-100 hover:text-green-600">Online
-                Admission Portal</a>
-              <a href="/public/pages/how-to-apply.html"
-                class="dropdown-item block px-6 py-3 text-sm hover:bg-gray-100 hover:text-green-600">How to
-                Apply</a>
-              <a href="/public/pages/faq.html"
-                class="dropdown-item block px-6 py-3 text-sm hover:bg-gray-100 hover:text-green-600">Frequently Asked
-                Questions (FAQs)</a>
+              class="dropdown-enter absolute left-0 top-full hidden group-hover:block w-64 bg-white shadow-xl rounded-lg py-3 border border-gray-200">
+              <a href="/Html File/backend-python.html"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Web Development
+              </a>
+              <a href="/Html File/ui-ux-design.html"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Graphic Designing / UI/UX Design
+              </a>
+              <a href="/Html File/e-commerce.html"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                E-Commerce
+              </a>
+              <a href="/Html File/digital-marketing.html"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Digital Marketing
+              </a>
+              <a href="/Html File/cyber-security.html"
+                class="flex items-center px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Cyber Security
+                <span class="ml-2 bg-green-700 text-white text-xs px-2 py-0.5 rounded font-bold">NEW</span>
+              </a>
+              <a href="/Html File/video-editing.html"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Video Editing
+              </a>
+              <a href="/Html File/essential-of-computing.html"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Essentials of Computing
+              </a>
             </div>
           </li>
 
-          <li class="nav-item">
-            <a href="/public/pages/internship.html"
-              class="nav-link px-5 py-6 flex items-center text-sm text-gray-800 hover:text-[#016832]">
+          <li class="relative group nav-item">
+            <a href="#"
+              class="nav-link-underline flex items-center px-4 py-6 text-gray-800 text-sm font-medium hover:text-green-700 transition-colors">
+              Admissions
+              <span class="arrow-rotate ml-1 text-xs">▼</span>
+            </a>
+            <div
+              class="dropdown-enter absolute left-0 top-full hidden group-hover:block w-64 bg-white shadow-xl rounded-lg py-3 border border-gray-200">
+              <a href="#"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Online Admission Portal
+              </a>
+              <a href="#"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                How to Apply
+              </a>
+              <a href="#"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Offered Programs
+              </a>
+              <a href="#"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Test Pattern
+              </a>
+              <a href="#"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Faculty
+              </a>
+              <a href="#"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Frequently Asked Questions (FAQs)
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <a href="#"
+              class="nav-link-underline block px-4 py-6 text-gray-800 text-sm font-medium hover:text-green-700 transition-colors">
               Internship
             </a>
           </li>
 
-          <li class="nav-item">
-            <a href="/public/pages/news.html"
-              class="nav-link px-5 py-6 flex items-center text-sm text-gray-800 hover:text-[#016832]">
+          <li class="relative group nav-item">
+            <a href="#"
+              class="nav-link-underline flex items-center px-4 py-6 text-gray-800 text-sm font-medium hover:text-green-700 transition-colors">
               News
+              <span class="arrow-rotate ml-1 text-xs">▼</span>
+            </a>
+            <div
+              class="dropdown-enter absolute left-0 top-full hidden group-hover:block w-64 bg-white shadow-xl rounded-lg py-3 border border-gray-200">
+              <a href="#"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Latest Announcements
+              </a>
+              <a href="#"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Admission Updates
+              </a>
+              <a href="#"
+                class="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-700 hover:pl-8 transition-all">
+                Events and Activities
+              </a>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Register Button (Desktop) -->
+        <a href="https://banoqabil.org/Student/Register"
+          class="hidden md:inline-block ml-4 bg-green-700 hover:bg-green-700 text-white px-8 py-2.5 rounded-md text-sm font-semibold transition-all hover:-translate-y-0.5 shadow-md hover:shadow-lg mx-20">
+          Register Now
+        </a>
+
+        <!-- Hamburger Menu (Mobile) -->
+        <div class="hamburger md:hidden flex flex-col cursor-pointer p-2 rounded hover:bg-gray-100 transition-colors"
+          id="hamburger">
+          <span class="block w-6 h-0.5 bg-gray-800 mb-1"></span>
+          <span class="block w-6 h-0.5 bg-gray-800 mb-1"></span>
+          <span class="block w-6 h-0.5 bg-gray-800"></span>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu md:hidden bg-white" id="navMenu">
+        <ul class="py-2">
+          <li class="border-b border-gray-100">
+            <a href="#"
+              class="block px-5 py-3 text-gray-800 text-sm font-medium hover:bg-gray-50 hover:text-green-700 transition-colors">
+              Home
+            </a>
+          </li>
+
+          <li class="border-b border-gray-100">
+            <div class="mobile-dropdown-item">
+              <button
+                class="mobile-dropdown-btn w-full flex items-center justify-between px-5 py-3 text-gray-800 text-sm font-medium hover:bg-gray-50 hover:text-green-700 transition-colors">
+                About Us
+                <span class="text-xs transform transition-transform duration-300">▼</span>
+              </button>
+              <div class="mobile-dropdown-content hidden bg-gray-50 pl-4">
+                <a href="/Html File/header file/vision.html"
+                  class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Vision and Mission
+                </a>
+                <a href="/Html File/header file/patron.html"
+                  class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Patron in Chief / All Staff
+                </a>
+                <a href="https://banoqabil.org/Student/Register"
+                  class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Registrar
+                </a>
+                <a href="/Html File/header file/map.html"
+                  class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Map
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="border-b border-gray-100">
+            <div class="mobile-dropdown-item">
+              <button
+                class="mobile-dropdown-btn w-full flex items-center justify-between px-5 py-3 text-gray-800 text-sm font-medium hover:bg-gray-50 hover:text-green-700 transition-colors">
+                All Courses
+                <span class="text-xs transform transition-transform duration-300">▼</span>
+              </button>
+              <div class="mobile-dropdown-content hidden bg-gray-50 pl-4">
+                <a href="/Html File/backend-python.html"
+                  class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Web Development
+                </a>
+                <a href="/Html File/ui-ux-design.html"
+                  class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Graphic Designing / UI/UX Design
+                </a>
+                <a href="/Html File/e-commerce.html"
+                  class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  E-Commerce
+                </a>
+                <a href="/Html File/digital-marketing.html"
+                  class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Digital Marketing
+                </a>
+                <a href="/Html File/cyber-security.html"
+                  class="flex items-center px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Cyber Security
+                  <span class="ml-2 bg-green-700 text-white text-xs px-2 py-0.5 rounded font-bold">NEW</span>
+                </a>
+                <a href="/Html File/video-editing.html"
+                  class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Video Editing
+                </a>
+                <a href="/Html File/essential-of-computing.html"
+                  class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Essentials of Computing
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="border-b border-gray-100">
+            <div class="mobile-dropdown-item">
+              <button
+                class="mobile-dropdown-btn w-full flex items-center justify-between px-5 py-3 text-gray-800 text-sm font-medium hover:bg-gray-50 hover:text-green-700 transition-colors">
+                Admissions
+                <span class="text-xs transform transition-transform duration-300">▼</span>
+              </button>
+              <div class="mobile-dropdown-content hidden bg-gray-50 pl-4">
+                <a href="#" class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Online Admission Portal
+                </a>
+                <a href="#" class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  How to Apply
+                </a>
+                <a href="#" class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Offered Programs
+                </a>
+                <a href="#" class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Test Pattern
+                </a>
+                <a href="#" class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Faculty
+                </a>
+                <a href="#" class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Frequently Asked Questions (FAQs)
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="border-b border-gray-100">
+            <a href="#"
+              class="block px-5 py-3 text-gray-800 text-sm font-medium hover:bg-gray-50 hover:text-green-700 transition-colors">
+              Internship
+            </a>
+          </li>
+
+          <li class="border-b border-gray-100">
+            <div class="mobile-dropdown-item">
+              <button
+                class="mobile-dropdown-btn w-full flex items-center justify-between px-5 py-3 text-gray-800 text-sm font-medium hover:bg-gray-50 hover:text-green-700 transition-colors">
+                News
+                <span class="text-xs transform transition-transform duration-300">▼</span>
+              </button>
+              <div class="mobile-dropdown-content hidden bg-gray-50 pl-4">
+                <a href="#" class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Latest Announcements
+                </a>
+                <a href="#" class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Admission Updates
+                </a>
+                <a href="#" class="block px-5 py-2.5 text-sm text-gray-700 hover:text-green-700">
+                  Events and Activities
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Mobile Register Button -->
+          <li class="px-5 py-3">
+            <a href="https://banoqabil.org/Student/Register"
+              class="block text-center bg-green-700 hover:bg-green-700 text-white px-6 py-3 rounded-md text-sm font-semibold transition-colors shadow-md">
+              Register Now
             </a>
           </li>
         </ul>
-        <nav class="flex gap-3">
-          <a href="https://banoqabil.org/Student/Register"
-            class="register-btn hidden lg:inline-block bg-[#016832] hover:bg-[#008C76] px-6 py-2 rounded-2xl text-sm text-white font-semibold hover:shadow-md transition ml-auto">
-            Register Now
-          </a>
-          <a href="/public/pages/contact.html"
-            class="register-btn hidden lg:inline-block bg-white text-black border border-black hover:border-[#016832] hover:text-[#016832] px-6 py-2 rounded-2xl text-sm font-semibold hover:shadow-md transition ml-auto">
-            Contact Us
-          </a>
-        </nav>
       </div>
-    </nav>
-  </header>
-
+    </div>
+  </nav>
   <main>
     <section id="hero" class="w-full overflow-hidden">
 
@@ -135,12 +352,12 @@
         </article>
 
         <article class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-          <img src="/public/images/Banner02.png" alt="Bano Qabil Programming Courses Banner"
+          <img src="/public/images/banner02.png" alt="Bano Qabil Programming Courses Banner"
             class="w-full h-full object-cover">
         </article>
 
         <article class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-          <img src="/public/images/Banner03.png" alt="Bano Qabil Digital Skills Courses Banner"
+          <img src="/public/images/banner03.png" alt="Bano Qabil Digital Skills Courses Banner"
             class="w-full h-full object-cover">
         </article>
       </header>
@@ -304,71 +521,10 @@
 
     </section>
 
-    <section id="section4" class="py-12 px-5">
-      <h2 class="text-center text-2xl font-bold mb-10">
-        Our Spotlight Programs and Courses
-      </h2>
+    <!-- Your content sections here -->
 
-      <!-- GRID -->
-      <div class="w-[90%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- COURSE CARD -->
-        <article class="course-card bg-white p-6 rounded-2xl 
-      transition-all duration-300 relative overflow-hidden border
-     hover:shadow-md border-gray-400">
-
-          <img src="/public/images/DGM-card.png" alt="Digital Marketing"
-            class="w-full h-88 object-contain mb-4 transition-transform duration-300 group-hover:scale-110">
-
-          <h3 class="text-xl text-center font-bold transition-colors duration-300 group-hover:text-green-700">
-            Digital Marketing and Search Engine Optimization
-          </h3>
-
-          <p
-            class="text-gray-500 text-sm text-center my-2 transition-colors duration-300 group-hover:text-green-700 font-medium">
-            BQ-DGS-221
-          </p>
-
-          <div class="flex justify-center gap-3 mt-3">
-            <!-- Outline Button -->
-            <a href="/public/pages/courses/digital-marketing.html" class=" bg-[#016832] text-white
-                  px-4 py-4 rounded-full font-semibold text-xs transition-all duration-300 justify-center items-center shadow-md
-                  hover:bg-[#008c76]">
-              VIEW COURSE OUTLINE
-            </a>
-
-            <!-- Enroll Button -->
-            <a href="https://banoqabil.org/Student/Register" class="btn-enroll bg-white text-[#016832] border-2 border-[#016832] hover:border-[#008c76]
-                  px-4 py-4 rounded-full font-semibold text-xs transition-all duration-300
-                 hover:text-[#008c76] hover:shadow-md">
-              ENROLL NOW
-            </a>
-          </div>
-        </article>
-
-        <!-- Duplicate this article for each course card, only replacing the content -->
-      </div>
-
-      <!-- VIEW ALL -->
-      <div class="text-center mt-10">
-        <a href="/public/pages/courses.html" class="px-7 py-3 rounded-full bg-black text-white font-semibold w-[15%] justify-center
-             inline-block transition-all duration-300 border-2 border-black
-              hover:bg-white hover:text-black hover:shadow-md">
-          View All Programs
-        </a>
-      </div>
-    </section>
-
-
-
-
-
-
-  </main>
-
-
-
-  <script type="module" src="/src/main.js"></script>
+    <!-- JavaScript -->
+    <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
