@@ -1,0 +1,247 @@
+@import "tailwindcss";
+
+/* Font Config
+uration */
+@import "tailwindcss";
+
+:root {
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+    /* Primary Brand Colors */
+    --green-dark: #016832;   /* Main button, CTAs, strong accents */
+    --green-light: #008C76;  /* Complementary accents, borders, minimal highlights */
+    --green-parrot: #91C645; /* Rare use only when needed */
+
+    /* Grayscale System */
+    --black: #1a1a1a;
+    --gray-700: #444;
+    --gray-500: #777;
+    --gray-300: #ddd;
+    --white: #ffffff;
+
+    --primary-blue: #016832;
+    --white: #ffffff;
+}
+
+/* Main Button Styling */
+.btn-main {
+    background-color: var(--green-dark);
+    color: var(--white);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.btn-main:hover {
+    background-color: #014f27; /* darker shade for hover */
+}
+
+/* Light accents using green-light */
+.accent {
+    color: var(--green-light);
+}
+
+.border-accent {
+    border: 1px solid var(--green-light);
+}
+
+/* Optional use of the parrot green for rare highlights */
+.highlight-rare {
+    background-color: var(--green-parrot);
+    color: var(--black);
+}
+
+
+/* Global Font Families */
+body {
+    font-family: Sora;
+    line-height: 1.6;
+    color: #1a1a1a;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade {
+    animation: fade 0.25s ease forwards;
+}
+
+/* News ticker animation */
+@keyframes news-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.animate-news-scroll {
+    animation: news-scroll 26s linear infinite;
+}
+
+/* Slide states */
+.slide {
+    opacity: 0;
+}
+.slide.active {
+    opacity: 1 !important;
+    z-index: 2;
+}
+
+
+.news-bar {
+    background: linear-gradient(
+        90deg,
+        #022050 0%,
+        #013C5F 30%,
+        #006576 80%,
+        #012D57 90%
+    );
+}
+.icon {
+    flex-shrink: 0;
+}
+
+.icon-svg {
+    width: 48px;
+    height: 48px;
+}
+
+@media (min-width: 768px) {
+    .icon-svg {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.font-sora {
+    font-family: 'Sora', sans-serif;
+}
+
+/* ======================================
+   ANIMATION CSS ONLY
+   ====================================== */
+
+/* Slide Down Animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-slideDown {
+    animation: slideDown 0.3s ease-out;
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* ======================================
+   HAMBURGER ANIMATION
+   ====================================== */
+.hamburger span {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ======================================
+   NAV LINK UNDERLINE ANIMATION
+   ====================================== */
+.nav-link-underline {
+    position: relative;
+}
+
+.nav-link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: #2ecc71;
+    transition: width 0.3s ease;
+}
+
+.nav-link-underline:hover::after {
+    width: 80%;
+}
+
+/* ======================================
+   DROPDOWN SLIDE ANIMATION
+   ====================================== */
+.dropdown-enter {
+    animation: slideDown 0.2s ease-out;
+}
+
+/* ======================================
+   ARROW ROTATION ANIMATION
+   ====================================== */
+.arrow-rotate {
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover .arrow-rotate {
+    transform: rotate(180deg);
+}
+
+/* ======================================
+   MOBILE MENU TRANSITION
+   ====================================== */
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.mobile-menu.active {
+    max-height: 100vh;
+}
+
+/* ======================================
+   MOBILE DROPDOWN CONTENT ANIMATION
+   ====================================== */
+.mobile-dropdown-content {
+    transition: all 0.3s ease-in-out;
+}
+
+/* ======================================
+   SMOOTH SCROLLING
+   ====================================== */
+html {
+    scroll-behavior: smooth;
+}
