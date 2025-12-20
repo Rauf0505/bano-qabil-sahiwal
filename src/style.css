@@ -245,3 +245,10 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+/* Footer */
+ /* Smooth hover feel */
+footer a {
+  transition: all 0.2s ease;
+}
+
