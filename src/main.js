@@ -262,3 +262,15 @@ newsBar.addEventListener("mouseenter", () => {
 newsBar.addEventListener("mouseleave", () => {
     newsTrack.style.animationPlayState = "running";
 });
+
+// Footer
+ function subscribe() {
+    const email = document.getElementById("emailInput").value;
+
+    if (!email || !email.includes("@")) {
+      alert("Please enter a valid email address");
+      return;
+    }
+
+    alert("Thanks for subscribing!");
+  }
